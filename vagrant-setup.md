@@ -116,17 +116,21 @@ Now that we have the Vagrantfile, we can use it to start a VM containing Docker.
 
 **NOTE**: Make sure you allow communication to your VM if/when prompted by your firewall.
 
-## Troubleshooting: Vagrant forces you to run init first
+## Troubleshooting
 
-Vagrant might prompt you to do a vagrant init before you do a vagrant up. If you do, delete the Vagrantfile that the init command creates and replace it with the Vagrantfile from step 3. The vagrant init command creates a generic config while we want to use the one from the Docker project.
+### Vagrant forces you to run init first
 
-Troubleshooting: VM halts immediately
+Vagrant might prompt you to do a **vagrant init** before you do a **vagrant up**. If you do, delete the Vagrantfile that the init command creates and replace it with the Vagrantfile from step 3. The **vagrant init** command creates a generic config while we want to use the one from the Docker project.
 
-If you get an error about the VM being halted right after bringing it up, you likely need to enable support for virtualization on your laptop. This involves rebooting it, going into the BIOS setup, and finding the setting that says something like “Enable Virtualization Support”. Unfortunately, the steps for doing this vary widely across machines. Ask for help in the community forum if you're stuck.  
+### VM halts immediately
 
-6. Check the Docker Daemon
+If you get an error about the VM being halted right after bringing it up, you likely need to enable support for virtualization on your laptop. This involves rebooting it, going into the BIOS setup, and finding the setting that says something like “Enable Virtualization Support”. Unfortunately, the steps for doing this vary widely across machines.  
 
-We're now sitting in a shell on the virtual machine and can now use the docker command line to talk to the Docker daemon running on the VM. Let's try a few commands to test if everything is working properly. Enter the commands in bold. You should see output similar to the other lines. (The exact IDs may differ due to updates by the Docker team.)
+## Check the Docker Daemon
+
+We're now sitting in a shell on the virtual machine and can now use the **docker** command line to talk to the Docker daemon running on the VM. Let's try a few commands to test if everything is working properly. Enter the commands in bold. You should see output similar to the other lines. (The exact IDs may differ due to updates by the Docker team.)
+
+```
 
 vagrant@precise64:~$ docker pull busybox
 Pulling repository busybox
@@ -161,23 +165,21 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 --- 8.8.8.8 ping statistics ---
 1 packets transmitted, 1 packets received, 0% packet loss
 round-trip min/avg/max = 48.009/48.009/48.009 ms
-
+```
 
 It doesn't seem like much now, but stay tuned. The first few sessions should hopefully show you how powerful containerization can be.
 
-Troubleshooting: dial unix /var/run/docker.sock: no such file or directory
+### Troubleshooting
+
+#### dial unix /var/run/docker.sock: no such file or directory
 
 If you receive the above error when trying the Docker commands above, the Docker daemon is not running. It sometimes fails to start after executing the vagrant halt && vagrant up commands. To start it, enter sudo service docker start and then try the Docker commands again.  
 
-Troubleshooting: "docker run busybox ping  -c 1 192.168.44.44" has 100% packet loss
+#### docker run busybox ping  -c 1 192.168.44.44" has 100% packet loss
 
+If this ping command fails, it likely means you forget to set the **PRIVATE_NETWORK=192.168.44.44** environment variable when you invoked **vagrant up**. Follow the instructions in the prior section again to halt the VM and restart it with a host-local network IP address assigned.
 
-If this ping command fails, it likely means you forget to set the PRIVATE_NETWORK=192.168.44.44 environment variable when you invoked vagrant up. Follow the instructions in the prior section again to halt the VM and restart it with a host-local network IP address assigned.
+## Managing the VM
 
-Managing the VM
+You can manage the Vagrant VM by returning to the folder containing the Vagrantfile on your host machine and [using any of the available Vagrant commands in the terminal](http://docs.vagrantup.com/v2/cli/index.html). If you "halt" or "destroy" the VM, make sure that you set the environment variables **VAGRANT_RAM=2048 PRIVATE_NETWORK=192.168.44.44** on your next **vagrant up**.
 
-You can manage the Vagrant VM by returning to the folder containing the Vagrantfile on your host machine and using any of the available Vagrant commands in the terminal. If you "halt" or "destroy" the VM, make sure that you set the environment variables VAGRANT_RAM=2048 PRIVATE_NETWORK=192.168.44.44 on your next vagrant up.
-
-Alternatives for the Adventurous
-
-There are many other ways to install Docker, particularly if you have a native Linux system or an OS X machine. See the "Installation" section on the left side at http://docs.docker.io/en/latest/ for details.
