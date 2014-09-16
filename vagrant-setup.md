@@ -14,16 +14,13 @@ VirtualBox is an open source virtualizer, an application that can run an entire 
 Do the following to install VirtualBox 4.3.6, the latest stable version tested for these instructions.
 
 1. Download the installer for your laptop operating system using the links below.
-
   * [VirtualBox 4.3.6 for Windows hosts](http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-Win.exe)
   * [VirtualBox 4.3.6 for OS X hosts](http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-OSX.dmg)
   * [VirtualBox 4.3.6 for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads) (requires that you pick your distro)
 2. Run the installer, choosing all of the default options.
-
   * Windows: Grant the installer access every time you receive a security prompt.
   * Mac: Enter your admin password.
   * Linux: Enter your root password if prompted.
-
 3. Reboot your laptop if prompted to do so when installation completes.
 4. Close the VirtualBox window if it pops up at the end of the install.
 
