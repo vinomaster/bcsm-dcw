@@ -87,6 +87,7 @@ Now that we have the Vagrantfile, we can use it to start a VM containing Docker.
 
 1. In your terminal, bring up the VM with the following command(s):
   * Windows:
+    
     ```
     set VAGRANT_RAM=2048
     set PRIVATE_NETWORK=192.168.44.44
