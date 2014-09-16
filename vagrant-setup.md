@@ -7,9 +7,10 @@ This page provides step-by-step instructions for setting up an Ubuntu virtual ma
 Docker requires a 64-bit architecture. Test that your machine is 64-bit before you proceed.
 * Windows: [Follow these steps](http://support.microsoft.com/kb/827218)
 * Mac/Linux: 
- ```
- $uname -m        #you should see something similar to x86_64
- ```
+
+  ```
+  $uname -m        #you should see something similar to x86_64
+  ```
 
 ## Install Virtualbox
 
@@ -30,14 +31,12 @@ Do the following to install VirtualBox 4.3.6, the latest stable version tested f
 ## Install Vagrant
 
 Vagrant is an open source command line utility for managing reproducible developer environments. While we could use the VirtualBox GUI to juggle virtual machines, their settings, and their distribution, Vagrant hides some of its complexity behind a few simple commands.
+
 Do the following to install Vagrant 1.4.1, the latest stable version tested for these instructions.
-
 1. Download the installer for your laptop operating system using the links below.
-
   * [Vagrant 1.4.3 for Windows hosts](https://dl.bintray.com/mitchellh/vagrant/Vagrant_1.4.3.msi)
   * [Vagrant 1.4.3 for OS X hosts](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg)
   * [Vagrant 1.4.3 for Linux hosts](http://www.vagrantup.com/downloads.html) (requires that you pick your distro)
-
 2. Run the installer, choosing all defaults.
 3. Reboot your laptop if prompted to do so when installation completes.
 
@@ -50,31 +49,30 @@ Installing Cygwin just to get SSH is overkill for our needs. A lower-overhead so
 1. Visit [http://git-scm.com/download/win](http://git-scm.com/download/win).
 2. If the installer does not download automatically, click to download it.
 3. Run the installer.
-  1. Choose the defaults until prompted about adjusting your PATH..
-  2. Select the last option "Run Git and included Unix tools from the Windows Command Prompt"
-  3. Continue choosing defaults until the installer completes.
+  * Choose the defaults until prompted about adjusting your PATH..
+  * Select the last option "Run Git and included Unix tools from the Windows Command Prompt"
+  * Continue choosing defaults until the installer completes.
 
 ## Get the Docker Vagrantfile
 
 With VirtualBox and Vagrant installed, we can now get a Vagrantfile that instructs Vagrant on how to create, configure, and provision a virtual machine for running Docker. We'll use Vagrantfile included in the Docker project itself.
 
 1. Open a terminal window.
-
   * Windows: In the Start Menu, search for and run the Command Prompt application (cmd.exe). If you have Cygwin installed, you can run the Cygwin Bash Shell instead.
   * Mac: Run Terminal in the Applications folder.
   * Linux: You know what to do.
-
 2. Make a folder that will serve as a shared directory between your host machine and the virtual machine containing Docker. Some suggestions:
-
-  * Windows: mkdir \Users\your_username\projects\docker_sandbox
-  * Mac/Linux: mkdir -p ~/projects/docker_sandbox
-
+  * Windows: 
+  ```mkdir \Users\your_username\projects\docker_sandbox```
+  * Mac/Linux: 
+  ```mkdir -p ~/projects/docker_sandbox```
 3. Download [https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile](https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile) and put it in the folder you created.
-
   * Windows: Use your web browser and "Save Link As". Make sure you strip off any extension (e.g., .txt) that your browser sticks on the file you downloaded.
-  * Mac/Linux: curl -o Vagrantfile https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile
-
-**NOTE**: The Vagrantfile linked above was removed from the master branch of the dotcloud/docker GitHub repository around 2014-02-23. We're linking to the version that was included in the last tagged release. See [https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912aa](https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912aa) for the commit message. The reasoning: they're beginning to favor boot2docker.
+  * Mac/Linux: 
+```
+    curl -o Vagrantfile https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile
+```
+**NOTE**: The Vagrantfile linked above was removed from the master branch of the dotcloud/docker GitHub repository around 2014-02-23. We're linking to the version that was included in the last tagged release. See [https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912a](https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912aa) for the commit message. The reasoning: they're beginning to favor boot2docker.
 
 
 ## Bring-Up the Vagrant Box
