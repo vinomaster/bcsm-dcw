@@ -33,6 +33,7 @@ Do the following to install VirtualBox 4.3.6, the latest stable version tested f
 Vagrant is an open source command line utility for managing reproducible developer environments. While we could use the VirtualBox GUI to juggle virtual machines, their settings, and their distribution, Vagrant hides some of its complexity behind a few simple commands.
 
 Do the following to install Vagrant 1.4.1, the latest stable version tested for these instructions.
+
 1. Download the installer for your laptop operating system using the links below.
   * [Vagrant 1.4.3 for Windows hosts](https://dl.bintray.com/mitchellh/vagrant/Vagrant_1.4.3.msi)
   * [Vagrant 1.4.3 for OS X hosts](https://dl.bintray.com/mitchellh/vagrant/Vagrant-1.4.3.dmg)
@@ -63,9 +64,13 @@ With VirtualBox and Vagrant installed, we can now get a Vagrantfile that instruc
   * Linux: You know what to do.
 2. Make a folder that will serve as a shared directory between your host machine and the virtual machine containing Docker. Some suggestions:
   * Windows: 
-  ```mkdir \Users\your_username\projects\docker_sandbox```
+```
+    mkdir \Users\your_username\projects\docker_sandbox
+```
   * Mac/Linux: 
-  ```mkdir -p ~/projects/docker_sandbox```
+```
+    mkdir -p ~/projects/docker_sandbox
+```
 3. Download [https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile](https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile) and put it in the folder you created.
   * Windows: Use your web browser and "Save Link As". Make sure you strip off any extension (e.g., .txt) that your browser sticks on the file you downloaded.
   * Mac/Linux: 
