@@ -77,6 +77,7 @@ With VirtualBox and Vagrant installed, we can now get a Vagrantfile that instruc
     ```
         curl -o Vagrantfile https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile
     ```
+    
 **NOTE**: The Vagrantfile linked above was removed from the master branch of the dotcloud/docker GitHub repository around 2014-02-23. We're linking to the version that was included in the last tagged release. See [https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912a](https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912aa) for the commit message. The reasoning: they're beginning to favor boot2docker.
 
 
@@ -86,11 +87,11 @@ Now that we have the Vagrantfile, we can use it to start a VM containing Docker.
 
 1. In your terminal, bring up the VM with the following command(s):
   * Windows:
-  ```
-    * set VAGRANT_RAM=2048
-    * set PRIVATE_NETWORK=192.168.44.44
-    * vagrant up
-  ```
+    ```
+    set VAGRANT_RAM=2048
+    set PRIVATE_NETWORK=192.168.44.44
+    vagrant up
+    ```
 2. Mac/Linux: VAGRANT_RAM=2048 PRIVATE_NETWORK=192.168.44.44 vagrant up​
 Wait while Vagrant sets up the VM instance.
 Vagrant will download an Ubuntu VM image and save it off in its own directory for safe keeping.
