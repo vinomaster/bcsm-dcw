@@ -5,8 +5,11 @@ This page provides step-by-step instructions for setting up an Ubuntu virtual ma
 ## Check System Requirements
 
 Docker requires a 64-bit architecture. Test that your machine is 64-bit before you proceed.
-Windows: [Follow these steps](http://support.microsoft.com/kb/827218)
-Mac/Linux:  $uname -m        #you should see something similar to x86_64
+* Windows: [Follow these steps](http://support.microsoft.com/kb/827218)
+* Mac/Linux: 
+ ```
+ $uname -m        #you should see something similar to x86_64
+ ```
 
 ## Install Virtualbox
 
