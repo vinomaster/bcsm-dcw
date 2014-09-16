@@ -108,9 +108,9 @@ Now that we have the Vagrantfile, we can use it to start a VM containing Docker.
 3. Vagrant informs you that folder sharing between your host machine and the VM is not yet active. Execute the following to enable it.
   * Enter:
   
-```
-  vagrant halt
-```
+    ```
+      vagrant halt
+    ```
   * Then repeat the commands you entered in step #1 of this section. (Don't forget the RAM and network variables!)
 4. Enter the command **vagrant ssh** to start a shell session on the VM.
 
