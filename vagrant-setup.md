@@ -64,19 +64,19 @@ With VirtualBox and Vagrant installed, we can now get a Vagrantfile that instruc
   * Linux: You know what to do.
 2. Make a folder that will serve as a shared directory between your host machine and the virtual machine containing Docker. Some suggestions:
   * Windows: 
-```
-    mkdir \Users\your_username\projects\docker_sandbox
-```
+    ```
+        mkdir \Users\your_username\projects\docker_sandbox
+    ```
   * Mac/Linux: 
-```
-    mkdir -p ~/projects/docker_sandbox
-```
+    ```
+        mkdir -p ~/projects/docker_sandbox
+    ```
 3. Download [https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile](https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile) and put it in the folder you created.
   * Windows: Use your web browser and "Save Link As". Make sure you strip off any extension (e.g., .txt) that your browser sticks on the file you downloaded.
   * Mac/Linux: 
-```
-    curl -o Vagrantfile https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile
-```
+    ```
+        curl -o Vagrantfile https://raw.github.com/dotcloud/docker/v0.8.1/Vagrantfile
+    ```
 **NOTE**: The Vagrantfile linked above was removed from the master branch of the dotcloud/docker GitHub repository around 2014-02-23. We're linking to the version that was included in the last tagged release. See [https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912a](https://github.com/dotcloud/docker/commit/67d55860a52bec8b1a1327355b4f27674ec912aa) for the commit message. The reasoning: they're beginning to favor boot2docker.
 
 
