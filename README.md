@@ -1,4 +1,4 @@
-# Docker Workshup
+# Docker Workshop
 
 This repo provides material for a [Boston Cloud Services Meetup](http://www.meetup.com/Boston-cloud-services/) on [Docker](https://www.docker.com). 
 
