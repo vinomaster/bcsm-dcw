@@ -93,21 +93,30 @@ Now that we have the Vagrantfile, we can use it to start a VM containing Docker.
     set PRIVATE_NETWORK=192.168.44.44
     vagrant up
     ```
-2. Mac/Linux: VAGRANT_RAM=2048 PRIVATE_NETWORK=192.168.44.44 vagrant up​
-Wait while Vagrant sets up the VM instance.
-Vagrant will download an Ubuntu VM image and save it off in its own directory for safe keeping.
-Vagrant will make a hidden copy of the VM image in the folder you created.
-Vagrant will launch, configure, and provision an instance of the VM.
-The Vagrantfile defaults to 512 MB of RAM. We want at least 2 GB for our follow-along sessions.
-The Vagrantfile defaults to no networking between the host and VM. We want a private network for testing web apps and similar from our host machine web browsers. You can pick whatever IP address you like, but make sure it doesn't conflict with other IPs on your local network.
-After many log messages, Vagrant returns you to the command prompt.
-Vagrant informs you that folder sharing between your host machine and the VM is not yet active. Execute the following to enable it.
-vagrant halt
-Then repeat the commands you entered in step #1 of this section. (Don't forget the RAM and network variables!)
-Enter the command vagrant ssh to start a shell session on the VM.
-NOTE: Make sure you allow communication to your VM if/when prompted by your firewall.
+  * Mac/Linux:
+  
+    ```
+    VAGRANT_RAM=2048 PRIVATE_NETWORK=192.168.44.44 vagrant up​
+    ```
+2. Wait while Vagrant sets up the VM instance.
+  * Vagrant will download an Ubuntu VM image and save it off in its own directory for safe keeping.
+  * Vagrant will make a hidden copy of the VM image in the folder you created.
+  * Vagrant will launch, configure, and provision an instance of the VM.
+    * The Vagrantfile defaults to 512 MB of RAM. We want at least 2 GB for our follow-along sessions.
+    * The Vagrantfile defaults to no networking between the host and VM. We want a private network for testing web apps and similar from our host machine web browsers. You can pick whatever IP address you like, but make sure it doesn't conflict with other IPs on your local network.
+  * After many log messages, Vagrant returns you to the command prompt.
+3. Vagrant informs you that folder sharing between your host machine and the VM is not yet active. Execute the following to enable it.
+  * Enter:
+  
+```
+  vagrant halt
+```
+  * Then repeat the commands you entered in step #1 of this section. (Don't forget the RAM and network variables!)
+4. Enter the command **vagrant ssh** to start a shell session on the VM.
 
-Troubleshooting: Vagrant forces you to run init first
+**NOTE**: Make sure you allow communication to your VM if/when prompted by your firewall.
+
+## Troubleshooting: Vagrant forces you to run init first
 
 Vagrant might prompt you to do a vagrant init before you do a vagrant up. If you do, delete the Vagrantfile that the init command creates and replace it with the Vagrantfile from step 3. The vagrant init command creates a generic config while we want to use the one from the Docker project.
 
