@@ -14,7 +14,7 @@ INDEX='sonets'
 DOC_TYPE='sonets'
 
 # build connection pool
- ES_NODE = {
+ES_NODE = {
     		'host': os.environ.get('ES_PORT_9200_TCP_ADDR'),
     		'port': os.environ.get('ES_PORT_9200_TCP_PORT')
 }
