@@ -1,11 +1,4 @@
 #!/usr/bin/env python
-# Licensed Internal Code - Property of IBM
-# Restricted Materials of IBM
-# Package: com.ibm.swget.ka
-# (c) Copyright IBM Corp. 2013
-# All Rights Reserved
-# US Government Users Restricted Rights - Use, duplication or disclosure
-# restricted by GSA ADP Schedule Contract with IBM Corp.
 import os
 import json
 import bottle
