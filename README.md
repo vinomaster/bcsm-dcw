@@ -11,7 +11,7 @@ The material used within this repo is derived from prior work by [Peter Parente]
 ## Workshop Preparation
 
 Choice one of the following approaches to establish a Docker environment:
-  * [Local Vagrant](https://github.com/vinomaster/bcsm-dcw/blob/master/vagrant-setup.md)
+  * [Local Vagrant](https://github.com/vinomaster/bcsm-dcw/blob/master/setup/vagrant-setup.md)
   * SoftLayer VM (to be provisioned and assigned during workshop)
 
 ## Tutorial
