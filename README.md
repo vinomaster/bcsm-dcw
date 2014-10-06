@@ -28,3 +28,16 @@ The topics to be covered in the workshop include:
 * Distributing containers
 
 The workshop will follow a build, test, explore, repeat pattern, common to the "Dockerization" process.
+
+## Slideshow
+
+This repo contains a slide presentation based on [reveal.js](http://lab.hakim.se/reveal-js/#/). Assuming accessing to a Docker environment, the slides can be viewed by doing the following on your Docker enabled VM:
+
+```
+$ git clone https://github.com/vinomaster/bcsm-dcw.git
+$ cd bcsm-dcw/slides
+$ ./run.sh
+$ docker ps
+# Open browser to http://<hostname>:8000/#/
+```
+
