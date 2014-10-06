@@ -116,6 +116,16 @@ $ mkdir -p  es-webapp
 $ cp -R bcsm-dcw/webapp es-webapp/
 $ ls -l
 ```
+-
+##  View Slideshow
+
+You may optionally view your own copy of the slideshow.
+```bash
+$ cd bcsm-dcw/slides
+$ ./run.sh
+$ docker ps
+# Open your browser to http://<hostname>:8000/#/
+```
 
 ---
 
