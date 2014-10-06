@@ -13,10 +13,11 @@ SAMPLE_DATA='http://www.samdutton.com/sonnets.json'
 INDEX='sonets'
 DOC_TYPE='sonets'
 
-# build connection pool
+# build connection pool using container environment variables
+# for ElasticSearch application.
 ES_NODE = {
-    		'host': os.environ.get('ES_PORT_9200_TCP_ADDR'),
-    		'port': os.environ.get('ES_PORT_9200_TCP_PORT')
+    		'host': os.environ.get('BCSMDCW_ES_ADDR'),
+    		'port': os.environ.get('BCSMDCW_ES_PORT')
 }
 
 es = elasticsearch.Elasticsearch([ES_NODE])
