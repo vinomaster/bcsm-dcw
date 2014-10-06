@@ -31,7 +31,7 @@ The workshop will follow a build, test, explore, repeat pattern, common to the "
 
 ## Slideshow
 
-This repo contains a slide presentation based on [reveal.js](http://lab.hakim.se/reveal-js/#/). Assuming accessing to a Docker environment, the slides can be viewed by doing the following on your Docker enabled VM:
+This repo contains a slide presentation based on [reveal.js](http://lab.hakim.se/reveal-js/#/). Assuming access to a Docker environment, the slides can be viewed by doing the following on your Docker enabled VM:
 
 ```
 $ git clone https://github.com/vinomaster/bcsm-dcw.git
